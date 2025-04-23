@@ -1,0 +1,134 @@
+/*
+  CSS Variables: Define the color theme used across the website.
+  These make it easier to maintain and update consistent colors.
+*/
+:root {
+    --color-bg: #1C1C1C;
+    --color-bg-alt: #2A2A2A;
+    --color-text: #9fa4ab;
+    --color-accent: #e0462f;
+    --color-highlight: #b68a5e;
+}
+
+/*
+  Ensure the html and body take up the full height of the viewport
+*/
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+  Global body styling:
+  Sets the background color, text color, and font family for the entire site.
+  Padding-top ensures space below the fixed navigation bar.
+*/
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: sans-serif;
+    padding-top: 60px;
+}
+
+/* Styles the navigation links in the top navigation bar */
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-number {
+    color: var(--color-highlight);
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-bg);
+    z-index: 1000;
+}
+
+/*
+  Shared styling for call-to-action buttons like the Resume and Mail Me links.
+  Gives them a consistent border, padding, and accent color.
+*/
+.resume-link,
+.button {
+    border: 1px solid var(--color-accent);
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: var(--color-accent);
+}
+
+/*
+  Hover effect for interactive buttons:
+  Changes the background and text color to enhance interactivity.
+*/
+.resume-link:hover,
+.button:hover {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+/* Main content area should grow to fill available space */
+main {
+    flex: 1;
+}
+
+/* Footer styling */
+footer {
+    background: var(--color-bg-alt);
+    color: var(--color-text);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.social a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+}
+
+.contact-info a,
+.contact-info span {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+/* Profile picture styling */
+.profile-pic {
+    max-width: 150px; /* Adjust the width as needed */
+    height: 250px; /* Set the height greater than the width */
+    border-radius: 0; /* Removes rounded corners */
+    display: block; /* Ensures proper alignment */
+    margin: 0 auto; /* Centers the image */
+    object-fit: cover; /* Ensures the image fits within the dimensions */
+}
