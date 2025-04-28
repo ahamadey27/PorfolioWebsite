@@ -3,12 +3,14 @@
 
 /* New experimental color palette */
 :root {
-    --color-bg: #90f6d7; /* first-color */
-    --color-bg-alt: #35bcbf; /* second-color */
-    --color-accent: #41506b; /* third-color */
-    --color-heading: #263849; /* fourth-color */
-    --color-text: #222; /* dark text for contrast */
-    --color-muted: #41506b; /* muted for borders/icons */
+    --color-bg: #323232; /* first-color - dark gray */
+    --color-bg-alt: #295f4e; /* second-color - dark teal */
+    --color-accent: #6db193; /* third-color - muted green */
+    --color-heading: #f4e5c2; /* fourth-color - light beige */
+    --color-text: #f4e5c2; /* light beige text on dark bg */
+    --color-text-on-alt: #f4e5c2; /* light beige text on dark teal */
+    --color-text-on-accent: #323232; /* dark gray text on muted green */
+    --color-muted: #6db193; /* muted green for muted elements */
 }
 
 html, body {
@@ -36,13 +38,13 @@ header {
     width: 100vw;
     background: var(--color-bg-alt);
     border-bottom: 1px solid var(--color-bg-alt);
+    color: var(--color-text-on-alt);
     z-index: 1000;
     padding: 0 40px;
     height: 70px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    color: var(--color-text);
     font-weight: 700 !important;
     letter-spacing: 0.5px;
 }
@@ -57,7 +59,7 @@ nav {
 }
 
 .logo {
-    color: var(--color-heading);
+    color: var(--color-text-on-alt);
     font-size: 2.2rem;
     font-weight: 700 !important;
     letter-spacing: 0.5px;
@@ -79,7 +81,7 @@ nav li {
 }
 
 nav a {
-    color: var(--color-heading);
+    color: var(--color-text-on-alt);
     text-decoration: none;
     transition: color 0.2s;
     font-size: 1.08rem;
@@ -93,11 +95,11 @@ nav a {
 }
 
 .resume-link {
+    color: var(--color-text-on-accent);
+    background: var(--color-accent);
     border: 2px solid var(--color-accent);
     padding: 8px 20px;
     border-radius: 4px;
-    color: var(--color-heading);
-    background: var(--color-accent);
     font-weight: 700 !important;
     font-size: 1.15rem;
     margin-left: 16px;
@@ -106,7 +108,7 @@ nav a {
 }
 .resume-link:hover {
     background: var(--color-heading);
-    color: var(--color-bg);
+    color: var(--color-bg); /* Dark text on light beige */
 }
 
 main {
@@ -173,7 +175,7 @@ main {
 
 .button, .intro .button {
     border: 2px solid var(--color-accent);
-    color: var(--color-heading);
+    color: var(--color-text-on-accent);
     background: var(--color-accent);
     padding: 14px 32px;
     font-size: 1.15rem;
@@ -188,7 +190,7 @@ main {
 }
 .button:hover, .intro .button:hover {
     background: var(--color-heading);
-    color: var(--color-bg);
+    color: var(--color-bg); /* Dark text on light beige */
 }
 
 /* Social sidebar */
@@ -231,7 +233,7 @@ footer {
     left: 0;
     width: 100vw;
     background: var(--color-bg-alt);
-    color: var(--color-text);
+    color: var(--color-text-on-alt);
     text-align: center;
     padding: 18px 0 10px 0;
     margin-top: auto;
@@ -260,7 +262,7 @@ footer {
 
 .contact-info a,
 .contact-info span {
-    color: var(--color-muted);
+    color: var(--color-text-on-alt);
     text-decoration: none;
     font-size: 0.95em;
     font-weight: 700 !important;
@@ -301,6 +303,55 @@ footer {
     width: 100%;
     overflow-y: visible;
     flex: 1 1 auto;
+}
+
+/* Project item layout */
+.project-item {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: stretch; /* Ensure columns stretch to the same height */
+}
+
+.project-image-col {
+    flex: 1;
+}
+
+.project-content-col {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-content-col > *:not(.project-links) {
+    /* Ensure elements above links don't grow/shrink unexpectedly */
+    flex-shrink: 0;
+}
+
+.project-content-col > p:not(.project-links) {
+    margin-bottom: 0.5rem; /* Reduce space below description paragraphs */
+}
+
+.project-content-col h2 {
+    margin-bottom: 0.5rem; /* Ensure consistent spacing below h2 */
+}
+
+.project-links {
+    margin-top: auto; /* Push links to the bottom */
+    padding-top: 1rem; /* Add some space above the links */
+}
+
+.project-screenshot {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .project-item {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 900px) {
