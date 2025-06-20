@@ -214,8 +214,8 @@ main {
     filter: drop-shadow(0 0 8px var(--color-accent));
 }
 
-/* Email vertical right */
-.email-vertical {
+/* Remove or comment out this block */
+/*.email-vertical {
     position: fixed;
     right: 40px;
     top: 50%;
@@ -225,7 +225,7 @@ main {
     letter-spacing: 2px;
     text-decoration: none;
     z-index: 1001;
-}
+}*/
 
 footer {
     position: fixed;
@@ -340,6 +340,16 @@ footer {
 .project-links {
     margin-top: auto; /* Push links to the bottom */
     padding-top: 1rem; /* Add some space above the links */
+}
+
+.project-links a {
+    color: #295f4e;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+.project-links a:hover {
+    color: var(--color-accent); /* Optional: accent color on hover */
 }
 
 .project-screenshot {
