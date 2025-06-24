@@ -286,7 +286,11 @@ footer {
 .about h1, .section-number {
     color: var(--color-heading) !important;
     font-weight: 700 !important;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.1px;
+}
+
+.about-text-col p {
+    margin-bottom: 0.1rem; /* Adjust this value to control spacing */
 }
 
 .about-text p {
