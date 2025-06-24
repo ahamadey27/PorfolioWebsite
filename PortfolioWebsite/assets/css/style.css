@@ -193,7 +193,7 @@ main {
     color: var(--color-bg); /* Dark text on light beige */
 }
 
-/* Social sidebar */
+Social sidebar
 .social-sidebar {
     position: fixed;
     left: 40px;
@@ -214,18 +214,7 @@ main {
     filter: drop-shadow(0 0 8px var(--color-accent));
 }
 
-/* Remove or comment out this block */
-/*.email-vertical {
-    position: fixed;
-    right: 40px;
-    top: 50%;
-    transform: translateY(-50%) rotate(90deg);
-    color: var(--color-heading);
-    font-size: 1rem;
-    letter-spacing: 2px;
-    text-decoration: none;
-    z-index: 1001;
-}*/
+
 
 footer {
     position: fixed;
@@ -235,7 +224,7 @@ footer {
     background: var(--color-bg-alt);
     color: var(--color-text-on-alt);
     text-align: center;
-    padding: 18px 0 10px 0;
+    padding: 12px 0 8px 0; /* slightly reduced height */
     margin-top: auto;
     font-size: 1rem;
     z-index: 1000;
@@ -243,11 +232,25 @@ footer {
 
 .footer-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 32px; /* space between social and contact */
     font-weight: 700 !important;
     letter-spacing: 0.5px;
+    min-height: 40px;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .social a img {
