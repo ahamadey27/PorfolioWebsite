@@ -370,7 +370,7 @@ footer {
 .certificates-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Now two columns */
-    gap: 1.2em 2em;
+    gap: .5em 2em;
     list-style: disc inside;
     padding-left: 0;
     margin-top: 0.5em;
