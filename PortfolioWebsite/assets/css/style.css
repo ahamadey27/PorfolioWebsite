@@ -413,3 +413,11 @@ footer {
 .experience + .experience {
     margin-top: -90px !important; /* Remove extra space between Experience and Education sections */
 }
+
+.job h2 {
+    margin-bottom: 0.3em; /* Reduce space below job title */
+}
+.duration {
+    margin-top: 0;
+    margin-bottom: 0.5em; /* Reduce space below duration */
+}
