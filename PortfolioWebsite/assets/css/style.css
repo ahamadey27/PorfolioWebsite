@@ -393,3 +393,7 @@ footer {
     background: var(--color-accent);
     border-radius: 5px;
 }
+
+.experience + .experience {
+    margin-top: -50px !important; /* Remove extra space between Experience and Education sections */
+}
