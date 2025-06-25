@@ -1,3 +1,6 @@
 {
-    "dotnet.defaultSolution": "EFCoreModelApp.sln"
+    "dotnet.defaultSolution": "EFCoreModelApp.sln",
+    "cSpell.words": [
+        "Hyperballad"
+    ]
 }
