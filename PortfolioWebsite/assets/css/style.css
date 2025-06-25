@@ -301,9 +301,10 @@ footer {
     color: var(--color-heading);
     font-size: 2.5rem;
     font-weight: 700 !important;
-    margin-bottom: 1.2em;
+    margin-bottom: 0.4em;
     letter-spacing: 0.5px;
-    text-shadow: 1px 2px 6px rgba(38,56,73,0.10);
+    border-bottom: 1px solid var(--color-accent);
+    padding-bottom: 0.2em; /* Thin accent line below the section title */
 }
 
 .experience {
@@ -366,6 +367,21 @@ footer {
     margin-top: 45px; /* Adjust this value as needed */
 }
 
+.certificates-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Now two columns */
+    gap: 1.2em 2em;
+    list-style: disc inside;
+    padding-left: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+.certificates-list li {
+    margin-bottom: 0;
+    padding-left: 0.5em;
+    word-break: break-word;
+}
+
 @media (max-width: 768px) {
     .project-item {
         flex-direction: column;
@@ -395,5 +411,5 @@ footer {
 }
 
 .experience + .experience {
-    margin-top: -80px !important; /* Remove extra space between Experience and Education sections */
+    margin-top: -90px !important; /* Remove extra space between Experience and Education sections */
 }
