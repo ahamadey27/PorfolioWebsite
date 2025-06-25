@@ -194,6 +194,32 @@
 
         <div class="project-item">
             <div class="project-image-col">
+                <img src="assets/images/wake.jpg" alt="Screenshot of Portfolio" class="project-screenshot" />
+            </div>
+            <div class="project-content-col">
+                <h2>Wake Advisor</h2>
+                <p>I was stand-up paddleboarding on the Hudson River, and as a massive freighter passed by, its 
+                    wake generated an amazing wave that peeled off the river's edge. Very satisfied after catching 
+                    this wave, I came up with the idea to create a web app that integrates real-time tide predictions 
+                    and live AIS vessel tracking. The app pinpoints windows when low tide (≤ 2 feet) coincides with 
+                    the approach of a southbound freighter, maximizing wake surfing opportunities.</p>
+                <p>
+                    This prototype is built with ASP.NET Core Razor Pages and a modular C# backend that integrates real-time data from external APIs. 
+                    The app fetches tide predictions from NOAA and attempts to track southbound freighters using AIS data, 
+                    with all API endpoints and geolocation settings managed via configuration files. 
+                    Please note: current AIS coverage for Hudson River freighters is limited, so live vessel tracking is 
+                    not always available until a more comprehensive data source is integrated.
+                </p>
+                <p class="project-links">
+                    <a href="https://github.com/ahamadey27/wake-app" target="_blank">GitHub</a> |
+                    <a href="https://wakeadvisor-csbfgmfjeehqd4eh.canadacentral-01.azurewebsites.net/" target="_blank">Live
+                        Demo</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-image-col">
                 <img src="assets/images/gulag.jpg" alt="Screenshot of Portfolio" class="project-screenshot" />
             </div>
             <div class="project-content-col">
@@ -209,7 +235,7 @@
                 <p>
                     Built entirely in Unity 2D with custom C# scripting, featuring hand-crafted pixel art animations,
                      original atmospheric soundtrack, and immersive sound design. Successfully published on Steam, 
-                     demonstrating complete game development lifecycle from concept to commercial release, including playtesting, 
+                     demonstrating complete game development lifecycle from concept to commercial release, including play testing, 
                      bug fixing, and platform-specific optimization for Windows distribution.
                 </p>
                 <p class="project-links">
