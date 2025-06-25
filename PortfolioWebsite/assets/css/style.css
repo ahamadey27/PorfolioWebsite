@@ -395,5 +395,5 @@ footer {
 }
 
 .experience + .experience {
-    margin-top: -50px !important; /* Remove extra space between Experience and Education sections */
+    margin-top: -80px !important; /* Remove extra space between Experience and Education sections */
 }
